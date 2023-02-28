@@ -23,24 +23,35 @@ Next(){
     Click
 }
 
+WaitTillQuiz(){
+    while(x <> ""){
+        ImageSearch, x, y, 0, 0, 1366, 768, %A_ScriptDir%/quiz.png
+    }
+    MouseMove, 400, 400
+}
 
-Yellow()
+Quiz(){
+    Yellow()
 
-Yellow()
+    Yellow()
 
-Blue()
+    Blue()
 
-Green()
+    Green()
 
-Blue()
-Green()
+    Blue()
+    Green()
 
-Green()
+    Green()
 
-Yellow()
+    Yellow()
 
-Yellow()
+    Yellow()
 
-Yellow()
+    Yellow()
 
-Green()
+    Green()
+}
+
+^i::
+WaitTillQuiz()

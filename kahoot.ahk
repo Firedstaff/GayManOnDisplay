@@ -24,8 +24,12 @@ Next(){
 }
 
 WaitTillQuiz(){
-    while(x <> ""){
+    DllCall("SetCursorPos", int, 400, int, 400)
+    loop{
         ImageSearch, x, y, 0, 0, 1366, 768, %A_ScriptDir%/quiz.png
+        if(x != ""){
+            break
+        }
     }
     MouseMove, 400, 400
 }
@@ -53,5 +57,5 @@ Quiz(){
     Green()
 }
 
-^i::
+f3::
 WaitTillQuiz()

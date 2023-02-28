@@ -1,3 +1,5 @@
+#SingleInstance Force
+
 Red() {
     DllCall("SetCursorPos", int, 400, int, 550)
     Click
@@ -19,42 +21,52 @@ Green(){
 }
 
 Next(){
+    Sleep, 3000
     DllCall("SetCursorPos", int, 1250, int, 300)
     Click
 }
 
 WaitTillQuiz(){
-    DllCall("SetCursorPos", int, 400, int, 400)
     loop{
         ImageSearch, x, y, 0, 0, 1366, 768, %A_ScriptDir%/quiz.png
         if(x != ""){
             break
         }
     }
-    MouseMove, 400, 400
 }
 
 Quiz(){
+    WaitTillQuiz()
     Yellow()
-
+    Next()
+    WaitTillQuiz()
     Yellow()
-
+    Next()
+    WaitTillQuiz()
     Blue()
-
+    Next()
+    WaitTillQuiz()
     Green()
-
+    Next()
+    WaitTillQuiz()
     Blue()
     Green()
-
+    Next()
+    WaitTillQuiz()
     Green()
-
+    Next()
+    WaitTillQuiz()
     Yellow()
-
+    Next()
+    WaitTillQuiz()
     Yellow()
-
+    Next()
+    WaitTillQuiz()
     Yellow()
-
+    Next()
+    WaitTillQuiz()
     Green()
+    Next()
 }
 
 f3::
